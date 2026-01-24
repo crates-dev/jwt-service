@@ -790,7 +790,7 @@ impl JwtService {
         let mut jwt_token: JwtToken = JwtToken::default();
         jwt_token
             .set_token(token)
-            .set_token_type(BEARER.to_string())
+            .set_token_type(BEARER)
             .set_expires_in(self.get_config().get_expiration_seconds());
         Ok(jwt_token)
     }
@@ -891,7 +891,7 @@ impl JwtService {
         let mut res_claims: CustomExtraJwtClaims<U> = CustomExtraJwtClaims::default();
         res_claims
             .set_custom(claims)
-            .set_sub(subject.as_ref().to_string())
+            .set_sub(subject.as_ref())
             .set_iss(self.get_config().get_issuer().clone())
             .set_exp(now + self.get_config().get_expiration_seconds() as usize)
             .set_iat(now);
@@ -903,7 +903,7 @@ impl JwtService {
         .map_err(|error| error.to_string())?;
         let mut jwt_token: JwtToken = JwtToken::default();
         jwt_token.set_token(token);
-        jwt_token.set_token_type(BEARER.to_string());
+        jwt_token.set_token_type(BEARER);
         jwt_token.set_expires_in(self.get_config().get_expiration_seconds());
         Ok(jwt_token)
     }
@@ -969,7 +969,7 @@ impl JwtService {
         .map_err(|error| error.to_string())?;
         let mut jwt_token: JwtToken = JwtToken::default();
         jwt_token.set_token(token);
-        jwt_token.set_token_type(BEARER.to_string());
+        jwt_token.set_token_type(BEARER);
         jwt_token.set_expires_in(self.get_config().get_expiration_seconds());
         Ok(jwt_token)
     }
