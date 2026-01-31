@@ -1,4 +1,4 @@
-use super::*;
+use crate::*;
 
 #[cfg(test)]
 fn create_test_jwt_service() -> JwtService {

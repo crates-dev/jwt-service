@@ -1,7 +1,7 @@
-use super::*;
+use crate::*;
 
 /// JWT configuration struct containing secret key, expiration time, and issuer.
-#[derive(Clone, Debug, Default)]
+#[derive(Clone, Debug, Default, Deserialize, Serialize)]
 pub struct JwtConfig {
     /// The secret key used for signing JWT tokens.
     pub(super) secret: String,
@@ -27,7 +27,7 @@ pub struct JwtExtraJwtClaims {
 }
 
 /// JWT token response struct containing the token and metadata.
-#[derive(Clone, Debug, Default)]
+#[derive(Clone, Debug, Default, Deserialize, Serialize)]
 pub struct JwtToken {
     /// The encoded JWT token string.
     pub(super) token: String,

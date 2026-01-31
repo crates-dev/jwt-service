@@ -13,16 +13,17 @@ pub use {r#enum::*, r#struct::*};
 
 use r#const::*;
 
-use serde::{Deserialize, Serialize};
-use serde_json::Value;
 use std::{
     collections::HashMap,
     time::{SystemTime, UNIX_EPOCH},
 };
 
-use jsonwebtoken::{
-    Algorithm, DecodingKey, EncodingKey, Header, TokenData, Validation, decode, encode,
-};
-
 #[cfg(test)]
 use serde_json::json;
+use {
+    jsonwebtoken::{
+        Algorithm, DecodingKey, EncodingKey, Header, TokenData, Validation, decode, encode,
+    },
+    serde::{Deserialize, Serialize},
+    serde_json::Value,
+};
