@@ -1,6 +1,6 @@
 use crate::*;
 
-#[derive(Clone, Debug, Eq, PartialEq, Deserialize, Serialize)]
+#[derive(Clone, Debug, Deserialize, Eq, PartialEq, Serialize)]
 pub enum JwtValidationError {
     Expired,
     InvalidSignature,
