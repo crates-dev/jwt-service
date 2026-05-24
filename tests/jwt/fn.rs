@@ -1,6 +1,5 @@
 use crate::*;
 
-#[cfg(test)]
 fn create_test_jwt_service() -> JwtService {
     let config: JwtConfig = JwtConfig::new(
         "test_secret_key".to_string(),
