@@ -10,8 +10,6 @@
 
 </center>
 
-[Official Documentation](https://docs.ltpp.vip/jwt-service/)
-
 [Api Docs](https://docs.rs/jwt-service/latest/)
 
 > A high-performance async library for JWT (JSON Web Token) authentication and authorization. Supports token generation, validation, and custom claims with optimized memory usage, ideal for HTTP clients/servers and web applications.
